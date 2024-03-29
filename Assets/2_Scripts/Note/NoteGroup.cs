@@ -8,6 +8,11 @@ public class NoteGroup : MonoBehaviour
     [SerializeField] private GameObject NoteSpawn;
     [SerializeField] private float NoteGap = 6f;
 
+    [SerializeField] private SpriteRenderer BtnspriteRenderer;
+    [SerializeField] private Sprite NormalBtnSprite;
+    [SerializeField] private Sprite SelectBtnSprite;
+    [SerializeField] private Animation amin;
+
     private List<Note> noteList = new List<Note>();
 
     void Start()
@@ -24,8 +29,14 @@ public class NoteGroup : MonoBehaviour
         }
     }
 
-    void Update()
+    public void OnInput(bool v)
     {
+        amin.Play();
+        BtnspriteRenderer.sprite = SelectBtnSprite;
+    }
 
+    public void callAniDone()
+    {
+        BtnspriteRenderer.sprite = NormalBtnSprite;
     }
 }
