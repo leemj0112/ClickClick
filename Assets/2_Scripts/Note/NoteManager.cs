@@ -12,13 +12,15 @@ public class NoteManager : MonoBehaviour
 
     public void OnInput(KeyCode keyCode)
     {
-        if (keyCode == KeyCode.A) 
+        int randid = Random.Range(0, NoteGrouparr.Length);
+        bool isApple = randid == 0 ? true : false;
+
+        foreach (NoteGroup noteGroup in NoteGrouparr)
         {
-            NoteGrouparr[0].OnInput(true);
-        }
-        if (keyCode == KeyCode.S)
-        {
-            NoteGrouparr[1].OnInput(true);
+            if(keyCode == noteGroup.KeyCode)
+            {
+                noteGroup.OnInput(isApple);
+            }
         }
     }
 }
