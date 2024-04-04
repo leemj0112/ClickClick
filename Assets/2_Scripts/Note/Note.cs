@@ -11,9 +11,18 @@ public class Note : MonoBehaviour
     [SerializeField] private Sprite appleSprite;
     [SerializeField] private Sprite BlueBarrySprite;
 
+    private bool isApple;
+
     internal void SetSprite(bool isApple)
     {
+        this.isApple = isApple;
         SpriteRenderer.sprite = isApple ? appleSprite : BlueBarrySprite;
+    }
+
+    public void DeleteNote()
+    {
+        GameManager.Instance.CalculateScore(isApple);
+        Destroy();
     }
 
     public  void Destroy()

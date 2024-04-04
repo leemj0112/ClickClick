@@ -24,15 +24,15 @@ public class NoteGroup : MonoBehaviour
 
     private List<Note> noteList = new List<Note>();
 
-    void Start()
+    private void Start()
     {
         for (int i = 0; i < noteMaxNum; i++)
         {
-            SpawnNote(true);
+            CreateNote(true);
         }
     }
 
-    private void SpawnNote(bool isApple)
+    private void CreateNote(bool isApple)
     {
         GameObject NoteGameOdj = Instantiate(NotePrefab);
 
@@ -51,7 +51,7 @@ public class NoteGroup : MonoBehaviour
 
         //노트 삭제
         Note denote = noteList[0];
-        denote.Destroy();
+        denote.DeleteNote();
         noteList.RemoveAt(0);
 
         //줄 내려오기
@@ -59,7 +59,7 @@ public class NoteGroup : MonoBehaviour
             noteList[i].transform.localPosition = Vector3.up * i * NoteGap;
 
         //생성
-        SpawnNote(isApple);
+        CreateNote(isApple);
 
         //노트 애니메이션
         amin.Play();
