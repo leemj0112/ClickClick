@@ -58,7 +58,7 @@ public class NoteGroup : MonoBehaviour
 
         //노트 삭제
         Note denote = noteList[0];
-        denote.DeleteNote();
+        denote.GiveScoreAndDeleteNote();
         noteList.RemoveAt(0);
 
         //줄 내려오기

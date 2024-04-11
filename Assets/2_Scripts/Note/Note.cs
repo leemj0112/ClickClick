@@ -19,7 +19,7 @@ public class Note : MonoBehaviour
         SpriteRenderer.sprite = isApple ? appleSprite : BlueBarrySprite;
     }
 
-    public void DeleteNote()
+    public void GiveScoreAndDeleteNote()
     {
         GameManager.Instance.CalculateScore(isApple);
         Destroy();
