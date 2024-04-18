@@ -1,0 +1,146 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &1
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5e6fedc2472449cead18ef23b5cb30d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library:
+  - m_Name: Head
+    m_Hash: 130111906
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Bandit
+      m_Hash: 544264766
+      m_Sprite: {fileID: -7267114955138120483, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -7267114955138120483, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+    - m_Name: Ork
+      m_Hash: 65974347
+      m_Sprite: {fileID: -5103619012537618115, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5103619012537618115, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: Torso
+    m_Hash: 647926657
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Bandit
+      m_Hash: 544264766
+      m_Sprite: {fileID: 5664168867494988075, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 5664168867494988075, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+    - m_Name: Ork
+      m_Hash: 65974347
+      m_Sprite: {fileID: -2682619199882534459, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2682619199882534459, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: Left Arm
+    m_Hash: 788631449
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Bandit
+      m_Hash: 544264766
+      m_Sprite: {fileID: -2625406876009589891, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2625406876009589891, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+    - m_Name: Ork
+      m_Hash: 65974347
+      m_Sprite: {fileID: -4600040365073471516, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -4600040365073471516, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: Left Fingers
+    m_Hash: 892709026
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Bandit
+      m_Hash: 544264766
+      m_Sprite: {fileID: -6554511013376299344, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -6554511013376299344, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+    - m_Name: Ork
+      m_Hash: 65974347
+      m_Sprite: {fileID: -5708775616498396904, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -5708775616498396904, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: Left Leg
+    m_Hash: 42955074
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Bandit
+      m_Hash: 544264766
+      m_Sprite: {fileID: 435234680782039122, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 435234680782039122, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+    - m_Name: Ork
+      m_Hash: 65974347
+      m_Sprite: {fileID: -6934711429222707068, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -6934711429222707068, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: Right Arm
+    m_Hash: 747450821
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Bandit
+      m_Hash: 544264766
+      m_Sprite: {fileID: 8129165943888233259, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 8129165943888233259, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+    - m_Name: Ork
+      m_Hash: 65974347
+      m_Sprite: {fileID: -2240048013211523756, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: -2240048013211523756, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: Right Leg
+    m_Hash: 17026846
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Bandit
+      m_Hash: 544264766
+      m_Sprite: {fileID: 2535247646299240472, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 2535247646299240472, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+    - m_Name: Ork
+      m_Hash: 65974347
+      m_Sprite: {fileID: 6121369961910573166, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 6121369961910573166, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  - m_Name: Weapon
+    m_Hash: 782213840
+    m_CategoryList: []
+    m_OverrideEntries:
+    - m_Name: Bandit
+      m_Hash: 544264766
+      m_Sprite: {fileID: 885216968361500075, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 885216968361500075, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+    - m_Name: Ork
+      m_Hash: 65974347
+      m_Sprite: {fileID: 4486407330484993428, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+      m_FromMain: 0
+      m_SpriteOverride: {fileID: 4486407330484993428, guid: 1937c0e2b8c88b4409c2fabbc54fd962, type: 3}
+    m_FromMain: 0
+    m_EntryOverrideCount: 2
+  m_PrimaryLibraryGUID: 
+  m_ModificationHash: 638490386583313313
+  m_Version: 1
