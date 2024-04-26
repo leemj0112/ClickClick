@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -57,6 +58,7 @@ public class GameManager : MonoBehaviour
 
         //GameOver
         GameOverObj.SetActive(true);
+        SceneManager.LoadScene("GameOverScene");
     }
 
     public void CalculateScore(bool isApple)

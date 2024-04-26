@@ -1,12 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Drop : MonoBehaviour
 {
     public GameObject DropBerry;
     float Timer = 0f;
-    public float TimerDiff = 0f;
+    public float TimerDiff = 2f;
 
     void Start()
     {
@@ -15,11 +13,15 @@ public class Drop : MonoBehaviour
 
     void Update()
     {
-        if(Timer > TimerDiff)
+        Timer += Time.deltaTime;
+
+        if (Timer > TimerDiff)
         {
-            Instantiate(DropBerry);
+            GameObject BerryClone = Instantiate(DropBerry);
+            BerryClone.transform.position = transform.position;
             Timer = 0f;
-            DropBerry.transform.position = new Vector3(-5.49f, 6.65f, 0f);
+
+            Destroy(BerryClone,2f);
         }
     }
 }
