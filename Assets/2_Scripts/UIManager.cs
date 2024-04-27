@@ -25,7 +25,7 @@ public class UIManager : MonoBehaviour
     }
         public void OnTimerChange(float currentTImer, float maxTImer)
         {
-            TimerTmp.text = $"{currentTImer:N1} / {maxTImer:N1}";
+            TimerTmp.text = $"{currentTImer:N0} / {maxTImer:N0}";
             TimerImg.fillAmount = (float)currentTImer / maxTImer;
         }
     }
