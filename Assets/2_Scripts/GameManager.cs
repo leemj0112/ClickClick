@@ -13,6 +13,10 @@ public class GameManager : MonoBehaviour
     [SerializeField] private float maxtime;
     [SerializeField] private GameObject GameClearObj;
     [SerializeField] private GameObject GameOverObj;
+    [SerializeField] AudioClip appleSound;
+    [SerializeField] AudioClip BerrySound;
+    [SerializeField] AudioSource MyAudioSourse;
+    public GameObject pop;
 
     public bool IsGameDone
     {
@@ -28,7 +32,9 @@ public class GameManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        MyAudioSourse = GetComponent<AudioSource>();
     }
+
     private void Start()
     {
         UIManager.Instance.OnScoreChange(this.score, maxScore);
@@ -38,6 +44,7 @@ public class GameManager : MonoBehaviour
         GameOverObj.SetActive(false);
 
         StartCoroutine(TImeCoroutien());
+
     }
 
     IEnumerator TImeCoroutien()
@@ -68,6 +75,19 @@ public class GameManager : MonoBehaviour
             score++;
             nextNoteGroupUnlockCnt++;
 
+            //사운드 출력
+
+            MyAudioSourse.PlayOneShot(appleSound);
+
+            //이펙트 애니메이션
+
+            GameObject NewPop = Instantiate(pop);
+            NewPop.transform.position = new Vector3(0.49f,- 19.91f,0f);
+
+            Destroy(NewPop, 0.5f);
+
+            //0.49 -19.91
+
             if (NoteGroupCreateScore <= nextNoteGroupUnlockCnt)
             {
                 nextNoteGroupUnlockCnt = 0;
@@ -82,6 +102,9 @@ public class GameManager : MonoBehaviour
         else
         {
             score--;
+
+            //사운드 출력
+            MyAudioSourse.PlayOneShot(BerrySound);
         }
         UIManager.Instance.OnScoreChange(this.score, maxScore);
     }
