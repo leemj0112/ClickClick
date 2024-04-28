@@ -1236,7 +1236,6 @@ MonoBehaviour:
   appleSound: {fileID: 8300000, guid: b794131764b99d14c8326eec9f62c5f3, type: 3}
   BerrySound: {fileID: 8300000, guid: 5ea5ef97c5d7ee347addeb07db4cc412, type: 3}
   MyAudioSourse: {fileID: 1039182333}
-  pop: {fileID: 2133325402045852560, guid: 9df37386e957c8340a6ecbc6f5e67acc, type: 3}
 --- !u!82 &1039182333
 AudioSource:
   m_ObjectHideFlags: 0

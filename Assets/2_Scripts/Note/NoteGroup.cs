@@ -14,7 +14,8 @@ public class NoteGroup : MonoBehaviour
     [SerializeField] private Sprite SelectBtnSprite;
     [SerializeField] private Animation amin;
     [SerializeField] private TextMeshPro KeyCodeTmp;
-    private GameObject pop;
+    public GameObject PopEffact;
+    public GameObject PopEffact2;
     private KeyCode keyCode;
 
     public  KeyCode KeyCode
@@ -61,6 +62,23 @@ public class NoteGroup : MonoBehaviour
         Note denote = noteList[0];
         denote.GiveScoreAndDeleteNote();
         noteList.RemoveAt(0);
+
+        //노트 이펙트
+
+        if (isApple)
+        {
+            GameObject NewPop = Instantiate(PopEffact);
+            NewPop.transform.localPosition = new Vector3(0f, -19.91f, 0f);
+
+            Destroy(NewPop, 0.5f);
+        }
+        else
+        {
+            GameObject NewPop = Instantiate(PopEffact2);
+            NewPop.transform.localPosition = new Vector3(0f, -19.91f, 0f);
+
+            Destroy(NewPop, 0.5f);
+        }
 
         //줄 내려오기
         for (int i = 0; i < noteList.Count; i++)

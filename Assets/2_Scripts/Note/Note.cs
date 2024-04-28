@@ -11,7 +11,7 @@ public class Note : MonoBehaviour
     [SerializeField] private Sprite appleSprite;
     [SerializeField] private Sprite BlueBarrySprite;
 
-    private bool isApple;
+    public bool isApple;
 
     internal void SetSprite(bool isApple)
     {
