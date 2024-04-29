@@ -21,4 +21,10 @@ public class Butten : MonoBehaviour
         //스타트 화면으로 돌아기기
         SceneManager.LoadScene("StartScene");
     }
+
+    public void CreditOnClick()
+    {
+        //크레딧 화면으로 돌아기기
+        SceneManager.LoadScene("Credit");
+    }
 }
