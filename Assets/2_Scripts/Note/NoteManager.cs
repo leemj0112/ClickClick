@@ -7,6 +7,8 @@ public class NoteManager : MonoBehaviour
 {
     [SerializeField] private GameObject NoteGroupPrefab;
     [SerializeField] private float noteGroupGab = 11;
+    [SerializeField] AudioClip CreateSound;
+    [SerializeField] AudioSource CreateAudioSourse;
 
     [SerializeField]
     private KeyCode[] wholeKeyCodeArr = new KeyCode[]
@@ -23,6 +25,7 @@ public class NoteManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+        CreateAudioSourse = GetComponent<AudioSource>();
     }
 
     public void CreateNoteGroup()
@@ -30,6 +33,7 @@ public class NoteManager : MonoBehaviour
         int noteGroupCount = noteGroupList.Count;
         KeyCode keyCode = this.wholeKeyCodeArr[noteGroupCount];
         CreateNoteGroup(keyCode);
+        CreateAudioSourse.PlayOneShot(CreateSound);
     }
 
     public void CreateNoteGroup(KeyCode keyCode)
