@@ -107,8 +107,6 @@ public class GameManager : MonoBehaviour
                     BestTime = currentTime;
                 }
 
-                Debug.Log($"{BestTime:N0}");
-
                 //게임 클리어 씬으로
                 SceneManager.LoadScene("ClearScene");
             }
