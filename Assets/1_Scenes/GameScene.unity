@@ -1140,7 +1140,7 @@ MonoBehaviour:
   NoteGroupCreateScore: 10
   score: 0
   currentTime: 0
-  maxtime: 5
+  maxtime: 40
   BestScore: 0
   appleSound: {fileID: 8300000, guid: b794131764b99d14c8326eec9f62c5f3, type: 3}
   BerrySound: {fileID: 8300000, guid: 5ea5ef97c5d7ee347addeb07db4cc412, type: 3}

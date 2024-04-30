@@ -69,15 +69,16 @@ public class NoteGroup : MonoBehaviour
         {
             GameObject NewPop = Instantiate(PopEffact);
             NewPop.transform.localPosition = new Vector3(0f, -19.91f, 0f);
-
+            Debug.Log("POP"+keyCode);
             Destroy(NewPop, 0.5f);
         }
         else
-        {
-            GameObject NewPop = Instantiate(PopEffact2);
-            NewPop.transform.localPosition = new Vector3(0f, -19.91f, 0f);
 
-            Destroy(NewPop, 0.5f);
+        {
+            GameObject NewPop2 = Instantiate(PopEffact2);
+            NewPop2.transform.localPosition = new Vector3(0f, -19.91f, 0f);
+            Debug.Log("POP2"+keyCode);
+            Destroy(NewPop2, 0.5f);
         }
 
         //줄 내려오기
