@@ -8,27 +8,47 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private int maxScore;
     [SerializeField] private int NoteGroupCreateScore = 10;
-    public static int score;
+    public int score;
+    public float currentTime;
     private int nextNoteGroupUnlockCnt;
     [SerializeField] private float maxtime;
-    [SerializeField] private GameObject GameClearObj;
-    [SerializeField] private GameObject GameOverObj;
+    private bool GameClearObj;
+    private bool GameOverObj;
+    public int BestScore;
+    [HideInInspector] public static float MinTIme= 100f;
+    [HideInInspector] public static float myTime;
+
+    //사운드
     [SerializeField] AudioClip appleSound;
     [SerializeField] AudioClip BerrySound;
     [SerializeField] AudioClip BGM;
     [SerializeField] AudioSource MyAudioSourse;
-    public static int BestScore = 0;
-    public static float BestTime = 0;
-    public static float currentTime = 0f;
 
     public bool IsGameDone
     {
         get
         {
-            if (GameClearObj.activeSelf || GameOverObj.activeSelf)
+            if (GameClearObj || GameOverObj)
+            {
+                //베스트 타임 저장
+                if (MinTIme >= myTime)
+                {
+                    MinTIme = myTime;
+                    PlayerPrefs.SetFloat("BestTime", MinTIme);
+                   
+                }
+                //클리어 씬으로
+                SceneManager.LoadScene("ClearScene");
                 return true;
+
+            }
+
             else
+            {
+               
                 return false;
+            }
+
         }
     }
 
@@ -36,15 +56,13 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
         MyAudioSourse = GetComponent<AudioSource>();
+        
     }
 
     private void Start()
     {
         UIManager.Instance.OnScoreChange(score, maxScore);
         NoteManager.Instance.Create();
-
-        GameClearObj.SetActive(false);
-        GameOverObj.SetActive(false);
 
         StartCoroutine(TImeCoroutien());
 
@@ -58,6 +76,7 @@ public class GameManager : MonoBehaviour
         while (currentTime < maxtime)
         {
             currentTime += Time.deltaTime;
+            myTime = currentTime;
             UIManager.Instance.OnTimerChange(currentTime, maxtime);
             yield return null;
 
@@ -68,10 +87,10 @@ public class GameManager : MonoBehaviour
         }
 
         //GameOver 문구 출력
-        GameOverObj.SetActive(true);
+        GameOverObj = true;
 
-        //베스트 점수 저장
-        if (BestScore >= score)
+        //최고 점수 저장
+        if (BestScore < score)
         {
             BestScore = score;
         }
@@ -99,16 +118,7 @@ public class GameManager : MonoBehaviour
             if (maxScore <= score)
             {
                 //Game Clear 문구 출력
-                GameClearObj.SetActive(true);
-
-                //베스트 시간 저장
-                if (BestTime <= currentTime)
-                {
-                    BestTime = currentTime;
-                }
-
-                //게임 클리어 씬으로
-                SceneManager.LoadScene("ClearScene");
+                GameClearObj = true;
             }
         }
         else
