@@ -13,6 +13,7 @@ public class NoteGroup : MonoBehaviour
     [SerializeField] private Sprite NormalBtnSprite;
     [SerializeField] private Sprite SelectBtnSprite;
     [SerializeField] private Animation amin;
+
     [SerializeField] private TextMeshPro KeyCodeTmp;
     public GameObject PopEffact;
     public GameObject PopEffact2;

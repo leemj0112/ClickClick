@@ -7,7 +7,7 @@ public class Play : MonoBehaviour
 {
     void Start()
     {
-        GetComponent<Text>().text = "Play Time :" + GameManager.myTime;
+        GetComponent<Text>().text = "Play Time :" + GameManager.myTime.ToString("N0");
     }
 
     void Update()

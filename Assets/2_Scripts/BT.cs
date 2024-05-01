@@ -7,7 +7,7 @@ public class BT : MonoBehaviour
 {
     void Start()
     {
-        GetComponent<Text>().text = "Best Time :" + GameManager.MinTIme;
+        GetComponent<Text>().text = "Best Time :" + GameManager.MinTIme.ToString("N0");
     }
 
     void Update()

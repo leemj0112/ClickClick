@@ -27,4 +27,9 @@ public class Butten : MonoBehaviour
         //크레딧 화면으로 돌아기기
         SceneManager.LoadScene("Credit");
     }
+
+    public void TutorialClick()
+    {
+        SceneManager.LoadScene("Tutorial");
+    }
 }
