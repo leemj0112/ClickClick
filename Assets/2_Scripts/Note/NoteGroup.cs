@@ -67,17 +67,17 @@ public class NoteGroup : MonoBehaviour
 
         if (isApple)
         {
-            GameObject NewPop = Instantiate(PopEffact);
-            NewPop.transform.localPosition = new Vector3(0f, -19.91f, 0f);
-            Debug.Log("POP"+keyCode);
+            GameObject NewPop =  Instantiate(PopEffact);
+            NewPop.transform.SetParent(NoteSpawn.transform);
+            NewPop.transform.localPosition = new Vector3(0f, -4.08f, 0f);
             Destroy(NewPop, 0.5f);
         }
         else
 
         {
             GameObject NewPop2 = Instantiate(PopEffact2);
-            NewPop2.transform.localPosition = new Vector3(0f, -19.91f, 0f);
-            Debug.Log("POP2"+keyCode);
+            NewPop2.transform.SetParent(NoteSpawn.transform);
+            NewPop2.transform.localPosition = new Vector3(0f, -4.08f, 0f);
             Destroy(NewPop2, 0.5f);
         }
 
