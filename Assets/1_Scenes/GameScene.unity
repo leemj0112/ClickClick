@@ -1296,12 +1296,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f561ea87f7ef4f847b6554f957b4de7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxScore: 10
+  maxScore: 35
   NoteGroupCreateScore: 10
-  score: 0
   currentTime: 0
-  maxtime: 10
-  BestScore: 0
+  maxtime: 30
   appleSound: {fileID: 8300000, guid: b794131764b99d14c8326eec9f62c5f3, type: 3}
   BerrySound: {fileID: 8300000, guid: 5ea5ef97c5d7ee347addeb07db4cc412, type: 3}
   BGM: {fileID: 8300000, guid: abb16989d57e1334bb7de7d920b0b367, type: 3}

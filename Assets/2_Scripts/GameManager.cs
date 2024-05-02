@@ -8,14 +8,14 @@ public class GameManager : MonoBehaviour
 
     [SerializeField] private int maxScore;
     [SerializeField] private int NoteGroupCreateScore = 10;
-    public int score;
+    public static int score;
     public float currentTime;
     private int nextNoteGroupUnlockCnt;
     [SerializeField] private float maxtime;
     private bool GameClearObj;
     private bool GameOverObj;
-    public int BestScore;
-    [HideInInspector] public static float MinTIme= 100f;
+    public static int BestScore;
+    [HideInInspector] public static float MinTIme = 100f;
     [HideInInspector] public static float myTime;
 
     //사운드
@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
                 {
                     MinTIme = myTime;
                     PlayerPrefs.SetFloat("BestTime", MinTIme);
-                   
+
                 }
                 //클리어 씬으로
                 SceneManager.LoadScene("ClearScene");
@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
 
             else
             {
-               
+
                 return false;
             }
 
@@ -56,7 +56,7 @@ public class GameManager : MonoBehaviour
     {
         Instance = this;
         MyAudioSourse = GetComponent<AudioSource>();
-        
+
     }
 
     private void Start()
@@ -82,7 +82,9 @@ public class GameManager : MonoBehaviour
 
             if (IsGameDone)
             {
+                score = 0;
                 yield break;
+
             }
         }
 
