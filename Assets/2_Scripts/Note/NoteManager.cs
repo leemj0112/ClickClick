@@ -1,7 +1,5 @@
 using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
-using static System.Runtime.CompilerServices.RuntimeHelpers;
 
 public class NoteManager : MonoBehaviour
 {
@@ -9,6 +7,7 @@ public class NoteManager : MonoBehaviour
     [SerializeField] private float noteGroupGab = 11;
     [SerializeField] AudioClip CreateSound;
     [SerializeField] AudioSource CreateAudioSourse;
+    [SerializeField] Animator animation;
 
     [SerializeField]
     private KeyCode[] wholeKeyCodeArr = new KeyCode[]
@@ -26,6 +25,18 @@ public class NoteManager : MonoBehaviour
     {
         Instance = this;
         CreateAudioSourse = GetComponent<AudioSource>();
+        animation = GetComponent<Animator>();
+    }
+
+    public void Not()
+    {
+        animation.CrossFade("Noteanim", 0, 0);
+    }
+
+    public void Star()
+    {
+        animation.CrossFade("Starpaly", 2f);
+        Invoke("Not", 2f);
     }
 
     public void CreateNoteGroup()
@@ -33,7 +44,9 @@ public class NoteManager : MonoBehaviour
         int noteGroupCount = noteGroupList.Count;
         KeyCode keyCode = this.wholeKeyCodeArr[noteGroupCount];
         CreateNoteGroup(keyCode);
+
         CreateAudioSourse.PlayOneShot(CreateSound);
+        Star();
     }
 
     public void CreateNoteGroup(KeyCode keyCode)
@@ -45,12 +58,13 @@ public class NoteManager : MonoBehaviour
         noteGroup.Create(keyCode);
 
         noteGroupList.Add(noteGroup);
+
     }
 
 
     public void Create()
     {
-        for(int i = 0; i < intNoteGroupNum; i++)
+        for (int i = 0; i < intNoteGroupNum; i++)
         {
             CreateNoteGroup(wholeKeyCodeArr[i]);
         }
@@ -63,7 +77,7 @@ public class NoteManager : MonoBehaviour
 
         foreach (NoteGroup noteGroup in noteGroupList)
         {
-            if(keyCode == noteGroup.KeyCode)
+            if (keyCode == noteGroup.KeyCode)
             {
                 noteGroup.OnInput(isApple);
                 break;
